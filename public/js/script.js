@@ -49,6 +49,7 @@ $(document).ready(function(){
     $('.materialboxed').materialbox();
     $('#formSubmit').click(()=>{
         formSubmitted();
+        console.log('here');
     });
     $('.modal').modal();
     getAllCats();
