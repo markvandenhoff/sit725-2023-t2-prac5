@@ -1,4 +1,4 @@
-let client = require('./dbconnectionn');
+let client = require('../dbConnection');
 
 let collection = client.db().collection('Cats');
 

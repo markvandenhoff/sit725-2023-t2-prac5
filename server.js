@@ -1,7 +1,7 @@
 let express = require('express');
 let app = express();
 let port = process.env.port || 3000;
-require('./dbConection');
+require('./dbConnection');
 let router = require('./routers/router');
 let http = require('http').createServer(app);
 
