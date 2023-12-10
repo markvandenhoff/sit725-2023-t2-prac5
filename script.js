@@ -1,13 +1,3 @@
-const clickMe = () => {
-    alert("Thanks for clicking me. Hope you have a nice day!")
-}
-$(document).ready(function () {
-    $('.materialboxed').materialbox();
-    $('#clickMeButton').click(() => {
-        clickMe();
-    })
-});
-
 const addCards = (items) => {
     items.forEach(item => {
         let itemToAppend = '<div class="col s4 center-align">'+
@@ -62,5 +52,6 @@ $(document).ready(function(){
     });
     $('.modal').modal();
     getAllCats();
+    console.log('ready');
 });
 
