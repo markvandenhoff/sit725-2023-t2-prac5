@@ -1,6 +1,6 @@
 let client = require('../dbConnection');
 
-let collection = client.db().collection('Cats');
+let collection = client.db().collection('Cat');
 
 function postCat(cat,callback) {
     collection.insertOne(cat,callback);
