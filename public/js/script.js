@@ -14,8 +14,7 @@ const addCards = (items) => {
 
 const addtoTable = (rows) => {
     let html = '';
-  
-    // Display it in a Table
+      // Display it in a Table
     html += '<!doctype html><html lang="en">';
     html += '<head>';
     html += '<title>Bootstrap Express/SQLite3 Demo</title>';
@@ -26,14 +25,11 @@ const addtoTable = (rows) => {
     html += '  integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"';
     html += '  crossorigin="anonymous">';
     html += '</head>';
-  
     html += '<body><div class="container">';
     html += '<table class="table">';
     html += '<thead class="thead-dark"><tr>';
-    html += '<th>Title</th><th>Calculation</th><th>Answer</th><th>Date</th>';
+    html += '<th>Title</th><th>Path</th><th>SubTitle</th><th>Description</th>';
     html += '<tr></thead><tbody>';
-  
-
         if (rows.length === 0) { 
             console.log("Array is empty!") 
             html += '<tr><td colspan="3"> No data found </td></tr>';
@@ -46,8 +42,7 @@ const addtoTable = (rows) => {
                 html += '<td>'+row.description+'</td>';
             });
         }
-  
-        html += '</tbody></table>';
+          html += '</tbody></table>';
         html += '</div>';
         html += '</body></html>';
         $("#table-section").append(html)

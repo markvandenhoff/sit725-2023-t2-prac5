@@ -16,7 +16,7 @@
 }
 
 .main-body-history {
-    background-color: white;
+    background-color: tan;
     color: black;
     height: calc(100vh - 64px);
 }
@@ -37,6 +37,11 @@
 }
 
 .home-button {
-    background-color: black;
+    background-color: white;
+    margin-top: 50px;
+}
+
+.table {
+    background-color: white;
     margin-top: 50px;
 }
