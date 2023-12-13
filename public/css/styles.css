@@ -1,6 +1,7 @@
 .navbar-size {
     width: 95%;
     margin: 0 auto;
+    color: black;
 }
 
 .user-image-size {
@@ -8,9 +9,15 @@
     margin: 4px 0;
 }
 
-.main-body {
-    background-color: #F28487;
+.main-body-index {
+    background-color: tan;
     color: white;
+    height: calc(100vh - 64px);
+}
+
+.main-body-history {
+    background-color: white;
+    color: black;
     height: calc(100vh - 64px);
 }
 
@@ -20,7 +27,11 @@
 }
 
 .click-me-button {
-    background-color: green;
+    background-color: black;
     margin-top: 50px;
 }
 
+.history-button {
+    background-color: black;
+    margin-top: 50px;
+}

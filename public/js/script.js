@@ -12,6 +12,50 @@ const addCards = (items) => {
     });
 }
 
+const addtoTable = (rows) => {
+    let html = '';
+  
+    // Display it in a Table
+    html += '<!doctype html><html lang="en">';
+    html += '<head>';
+    html += '<title>Bootstrap Express/SQLite3 Demo</title>';
+    html += '<meta charset="utf-8">';
+    html += '<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">';
+    html += '<link rel="stylesheet"';
+    html += '  href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"';
+    html += '  integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"';
+    html += '  crossorigin="anonymous">';
+    html += '</head>';
+  
+    html += '<body><div class="container">';
+    html += '<table class="table">';
+    html += '<thead class="thead-dark"><tr>';
+    html += '<th>Title</th><th>Calculation</th><th>Answer</th><th>Date</th>';
+    html += '<tr></thead><tbody>';
+  
+
+        if (rows.length === 0) { 
+            console.log("Array is empty!") 
+            html += '<tr><td colspan="3"> No data found </td></tr>';
+        } else {
+            rows.forEach(function (row){
+                html += '<tr>';
+                html += '<td>'+row.title+'</td>';
+                html += '<td>'+row.path+'</td>';
+                html += '<td>'+row.subTitle+'</td>';
+                html += '<td>'+row.description+'</td>';
+            });
+        }
+  
+        html += '</tbody></table>';
+        html += '</div>';
+        html += '</body></html>';
+        $("#table-section").append(html)
+    };
+  
+
+
+
 const formSubmitted = () => {
     let formData = {};
     formData.title = $('#title').val();
@@ -41,6 +85,7 @@ function getAllCats() {
     $.get('/api/cat',(result)=>{
         if (result.statusCode === 200) {
             addCards(result.data);
+            addtoTable(result.data);
             console.log('we got the cats');
         }
     });
