@@ -10,6 +10,6 @@ app.use(express.urlencoded({extended: false}));
 app.use('/api/cat',router);
 
 
-http.listen(port, ()=>{
+app.listen(port, ()=>{
     console.log('express server started');
 });
