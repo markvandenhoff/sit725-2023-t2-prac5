@@ -28,6 +28,7 @@ app.get('/api/cats', (req,res) => {
     getAllCats((err,result)=>{
         if (!err) {
             res.json({statusCode:200, data:result, message:'get all cats successful'});
+            console.log('we got the cats');
         }
     });
 });
